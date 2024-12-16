@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+  <script>
+    //This is the problematic line of code. This line could potentially throw an error
+if the element with id 'myDiv' is not found in the DOM.
+    document.getElementById('myDiv').innerHTML = "This text replaces the initial text."; 
+
+    //Adding a check to see if the element exists before modifying it. 
+    // if(document.getElementById('myDiv')){
+    //  document.getElementById('myDiv').innerHTML = "This text replaces the initial text.";
+    //}else{
+    //  console.log('Element not found');
+    //}
+  </script>
+</body>
+</html>
