@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+  <script>
+    //Check if the element exists before modifying it.
+    const myDiv = document.getElementById('myDiv');
+    if (myDiv) {
+      myDiv.innerHTML = "This text replaces the initial text.";
+    } else {
+      console.error('Element with id "myDiv" not found.');
+    }
+  </script>
+</body>
+</html>
